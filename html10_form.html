@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼태그(input, select, textarea)</title>
+</head>
+<body>
+    <h2>폼태그(input)</h2>
+    <p>
+        input태그는 1줄 텍스트, radio, checkbox, file첨부 등을 입력하는 폼을 작성한다.
+    </p>
+    <!-- 
+        method 속성
+        get방식 : 주소표시줄에 쿼리데이터로 정보를 노출하여 전송ㄷ하는 방식
+        post방식 : 데이터를 숨겨 전송하는 방식
+    
+        action
+            폼의 정보를 기져가는 기능을 구현한 파일명
+
+        placeholer : 입력안내글
+    -->
+
+    <form method="get" action="abc.jsp">
+        아이디 : <input type="text" name="userid" value="abcde" readonly placeholder="아이디를 입력하세요" maxlength="8" minlength="5"><br/>
+        비밀번호 : <input type="password" name="userpwd"/><br/>
+        이메일 : <input type="email" name="email" value="abcde@nate.com" disabled><br/>
+        수신어부 : <input type="radio" name="send" checked value="yes"/>수신함 
+                  <input type="radio" name="send" value="no"/>수신안함 <br/>
+        관심분야 : <input type="checkbox" name="inter" value="축구"/>축구
+                  <input type="checkbox" name="inter" value="농구"/>농구
+                  <input type="checkbox" name="inter" value="야구"/>야구
+                  <input type="checkbox" name="inter" value="배구" checked/>배구
+        <br/>
+        수량 : <input type="number" name="cnt" max="20" min="10" step="2" value="14"/><br/>
+        옵션수량 : <input type="range" name="cnt2" max="20" min="10" step="2" value="14"/><br/>
+        <hr/>
+        날짜(date) : <input type="date" name="d1"/><br/>
+        날짜(datetime) : <input type="datetime-local" name="d2"/><br/>
+        날짜(time) : <input type="time" name="d3"/><br/>
+        날자(month) : <input type="month" name="d4" /><br/>
+        날짜(week) : <input type="week" name="d5"/><br/>
+        <hr/>
+        문의 내용 : <textarea name="qna" cols="50" rows="5">여러줄의 문자를 입력하는 박스</textarea><br/>
+        리스트박스 : <select name="depart" size="5" multiple>
+                        <option value="A">기획부</option>
+                        <option value="B">총괄부</option>
+                        <option value="C">인사부</option>
+                        <option value="D" selected>사업부</option>
+                        <option value="E">영업부</option>
+                    </select><br/>
+        optgroup태그 : 
+                    <select name="language">
+                        <optgroup label="FrontEnd">
+                            <option>HTML5</option>
+                            <option>CSS3</option>
+                            <option>JAVASCRIPT</option>
+                            <option>REACT</option>
+                        </optgroup>
+                        <optgroup label="BackEnd">
+                            <option>JAVA</option>
+                            <option>SPRING</option>
+                            <option>MYBATIS</option>
+                        </optgroup>
+                    </select>
+        <hr/>
+        파일선택 : <input type="file" name="filename" /><br/>
+        숨김데이터 : <input type="hidden" name="name" value="홍길동"/><br />
+        <input type="submit" value="전송하기"/>
+        <input type="button" value="전송하기" onclick="alert('버튼을 클릭 했습니다')"/>
+        <input type="reset" value="초기화"/>
+        <input type="image" src="../img/5_smail.png"/>
+    </form>
+</body>
+</html>

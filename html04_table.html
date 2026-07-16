@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table 태그</title>
+</head>
+<body>
+    <!-- 표를 만드는 태그 table, tr, th, td, caption colgroup, col 
+        th태그 : 가운데 정렬, 글자 진하게 표시하여 강조한다. 
+
+        colgroup : 컬럼단위 기능을 적용할 수 있다.
+        col : 칸을 의미한다.
+
+        caption태그 : 표의 제목을 표시한다.
+        
+        ctrl + shift + l
+    -->
+    <table border="1" width="500">
+        <caption><h2>시간표</h2></caption>
+        <colgroup>
+            <col/>
+            <col style="background-color: aquamarine;"/>
+            <col/>
+        </colgroup>
+        
+        <thead>
+            <tr><!-- 첫번째 줄 -->
+                <th>용도</th>
+                <th>중량</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>첫번째 칸</td>
+                <td width="200"><img src="../img/1.jpeg" width="100" alt="꽃입니다."></td>
+                <td style="color: blue;">세번째 칸 세번째 칸 세번째 칸 세번째 칸 세번째 칸 세번째 칸</td>
+            </tr>
+            <tr style="color: red;">
+                <td>안녕하세요</td>
+                <td>
+                    <ol>
+                        <li><em>html 연습중</em></li>
+                        <li><b>CSS 앞으로 할것</b></li>
+                    </ol>
+                </td>
+                <td>잘있어요</td>
+            </tr>
+        </tbody>
+        
+    </table>
+</body>
+</html>

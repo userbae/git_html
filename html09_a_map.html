@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map을 이용한 링크걸기</title>
+</head>
+<body>
+    <h2>이미지의 일부르 이용한 링크걸기</h2>
+    <img src="../img/jeju.png" usemap="#imgMap"/>
+
+    <pre>
+        map태그 : 특정이미지의 특정부분을 링크걸기 위한 기능을 구현한다. 
+                  map태그는 페이지의 마지막에 기술한다.
+        area태그 : map태그내에 링크 수만큼 표기한다.
+            shape 속성 : rect, circle, poly
+            coords 속성 : 좌표
+    </pre>
+    <map id="imgMap">
+        <!--               x1,y1,x2,y2-->
+        <area shape="rect" coords="185,130,270,205" 
+        href="https://www.jejuair.net/ko/main/base/index.do" 
+        target="_blank" title="제주공항으로~~"/>
+
+        <!--                  x, y, r-->
+        <area shape="circle" coords="480, 290, 60"
+        href="https://www.jeju.go.kr/index.htm"
+        target="_blank" title="한라산 도립공원 홈페이지로 이동하기~~~~~"/>
+
+        <!--                x1, y1, x2, y2, x3, y3, ...-->
+        <area shape="poly" coords="90,200,190,270,140,320,70,320,40,250"
+        href="./html08_a.html"
+        />
+    </map>
+</body>
+</html>
